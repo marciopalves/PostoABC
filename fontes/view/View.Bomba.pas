@@ -204,21 +204,26 @@ end;
 procedure TfrmBomba.actSalvarExecute(Sender: TObject);
 Var
   Control: TBombaControl;
+  Salvar: Boolean;
 begin
   AtribuirValores;
   Control := TBombaControl.Create;
   try
-    if Control.Salvar(Model) then
-      application.messagebox('Registro gravado com sucesso!','Atenção',MB_ICONWARNING+MB_OK)
-    else
-    begin
-      application.messagebox('Falha existem dados que precisam ser preenchidos!','Atenção',MB_ICONWARNING+MB_OK);
-      edtDescricao.SetFocus;
+    try
+      Salvar := Control.Salvar(Model);
+      if Salvar then
+        application.messagebox('Registro gravado com sucesso!','Atenção',MB_ICONWARNING+MB_OK);
+    except
+      on e: exception do
+        raise Exception.Create('Falha ao salvar registro!'+sLineBreak+e.ToString);
     end;
   finally
     FreeAndNil(Control);
-    Refresh;
-    HabilitarDefinirCampos(tacIndefinido);
+    if Salvar then
+    begin
+      Refresh;
+      HabilitarDefinirCampos(tacIndefinido);
+    end;
   end;
 end;
 
@@ -233,8 +238,6 @@ begin
 end;
 
 procedure TfrmBomba.FormShow(Sender: TObject);
-Var
-  Control: TBombaControl;
 begin
   if Not Assigned(Model) then
     Model := TBombaModel.Create;
@@ -301,10 +304,11 @@ begin
   case pAcao of
     tacIncluir:
     begin
-      pnlBotoes.Enabled := False;
-      pnlFiltro.Enabled := False;
+      pnlBotoes.Enabled       := False;
+      pnlFiltro.Enabled       := False;
       pnlBotoesRodape.Enabled := True;
-      pgDados.ActivePage := tsDados;
+      cbbTanques.ItemIndex    := 0;
+      pgDados.ActivePage      := tsDados;
       edtDescricao.SetFocus;
     end;
     tacEdicao:

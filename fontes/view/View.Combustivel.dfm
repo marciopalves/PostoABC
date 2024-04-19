@@ -2,8 +2,8 @@ object frmCombustivel: TfrmCombustivel
   Left = 0
   Top = 0
   Caption = 'Combust'#237'vel'
-  ClientHeight = 393
-  ClientWidth = 589
+  ClientHeight = 391
+  ClientWidth = 581
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,14 +17,13 @@ object frmCombustivel: TfrmCombustivel
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 589
+    Width = 581
     Height = 65
     Align = alTop
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 585
     object pnlNovo: TPanel
       AlignWithMargins = True
       Left = 0
@@ -161,14 +160,13 @@ object frmCombustivel: TfrmCombustivel
   object pnlFiltro: TPanel
     Left = 0
     Top = 65
-    Width = 589
+    Width = 581
     Height = 78
     Align = alTop
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 585
     object lblCodigo: TLabel
       Left = 13
       Top = 20
@@ -210,25 +208,23 @@ object frmCombustivel: TfrmCombustivel
   object pnlDados: TPanel
     Left = 0
     Top = 143
-    Width = 589
-    Height = 250
+    Width = 581
+    Height = 248
     Align = alClient
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 585
-    ExplicitHeight = 249
     object pgDados: TPageControl
       Left = 0
       Top = 0
-      Width = 589
-      Height = 250
+      Width = 585
+      Height = 249
       ActivePage = tsDados
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 585
-      ExplicitHeight = 249
+      ExplicitWidth = 581
+      ExplicitHeight = 248
       object tsPesquisa: TTabSheet
         Caption = 'Pesquisa'
         object dbgDados: TDBGrid
@@ -281,12 +277,14 @@ object frmCombustivel: TfrmCombustivel
         object pnlEdits: TPanel
           Left = 0
           Top = 0
-          Width = 581
-          Height = 220
+          Width = 577
+          Height = 219
           Align = alClient
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 573
+          ExplicitHeight = 218
           object Label1: TLabel
             Left = 21
             Top = 12
@@ -340,12 +338,14 @@ object frmCombustivel: TfrmCombustivel
           end
           object pnlRodape: TPanel
             Left = 1
-            Top = 178
-            Width = 579
+            Top = 177
+            Width = 575
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 5
+            ExplicitTop = 176
+            ExplicitWidth = 571
             object pnlEspacamento: TPanel
               Left = 0
               Top = 0
@@ -358,11 +358,12 @@ object frmCombustivel: TfrmCombustivel
             object pnlBotoesRodape: TPanel
               Left = 355
               Top = 0
-              Width = 224
+              Width = 220
               Height = 41
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 1
+              ExplicitWidth = 216
               object pnlSalvar: TPanel
                 AlignWithMargins = True
                 Left = 0

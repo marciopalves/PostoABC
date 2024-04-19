@@ -32,7 +32,11 @@ implementation
 
 { TCombustivelControl }
 
-uses Model.Enumerado, System.SysUtils, Dao.Sequencia;
+uses
+  Model.Enumerado,
+  System.SysUtils,
+  Dao.Sequencia,
+  RTTIUtils;
 
 constructor TCombustivelControl.Create;
 begin
@@ -75,7 +79,7 @@ end;
 function TCombustivelControl.Salvar(pCombustivel: TCombustivelModel): boolean;
 begin
   result:= false;
-  if ValidaDados(pCombustivel) then
+  if TRTTIUTtils.ValidarCampos(pCombustivel) then
   begin
     case pCombustivel.Acao of
       tacIncluir:

@@ -30,7 +30,7 @@ object frmPrincipal: TfrmPrincipal
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitHeight = 470
+      ExplicitTop = -5
       object pnlAbastecimento: TPanel
         AlignWithMargins = True
         Left = 0

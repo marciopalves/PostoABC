@@ -2,8 +2,8 @@ object frmBomba: TfrmBomba
   Left = 0
   Top = 0
   Caption = 'Bombas de Combust'#237'vel'
-  ClientHeight = 395
-  ClientWidth = 597
+  ClientHeight = 394
+  ClientWidth = 593
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,14 +18,14 @@ object frmBomba: TfrmBomba
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 597
+    Width = 593
     Height = 65
     Align = alTop
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 593
+    ExplicitWidth = 589
     object pnlNovo: TPanel
       AlignWithMargins = True
       Left = 0
@@ -162,14 +162,14 @@ object frmBomba: TfrmBomba
   object pnlFiltro: TPanel
     Left = 0
     Top = 65
-    Width = 597
+    Width = 593
     Height = 78
     Align = alTop
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 593
+    ExplicitWidth = 589
     object lblCodigo: TLabel
       Left = 13
       Top = 20
@@ -211,32 +211,32 @@ object frmBomba: TfrmBomba
   object pnlDados: TPanel
     Left = 0
     Top = 143
-    Width = 597
-    Height = 252
+    Width = 593
+    Height = 251
     Align = alClient
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 593
-    ExplicitHeight = 251
+    ExplicitWidth = 589
+    ExplicitHeight = 250
     object pgDados: TPageControl
       Left = 0
       Top = 0
-      Width = 597
-      Height = 252
-      ActivePage = tsPesquisa
+      Width = 593
+      Height = 251
+      ActivePage = tsDados
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 593
-      ExplicitHeight = 251
+      ExplicitWidth = 589
+      ExplicitHeight = 250
       object tsPesquisa: TTabSheet
         Caption = 'Pesquisa'
         object dbgDados: TDBGrid
           Left = 0
           Top = 0
-          Width = 589
-          Height = 222
+          Width = 585
+          Height = 221
           Align = alClient
           DataSource = ds
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -273,14 +273,12 @@ object frmBomba: TfrmBomba
         object pnlEdits: TPanel
           Left = 0
           Top = 0
-          Width = 589
-          Height = 222
+          Width = 585
+          Height = 221
           Align = alClient
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 585
-          ExplicitHeight = 221
           object Label1: TLabel
             Left = 21
             Top = 12
@@ -320,14 +318,12 @@ object frmBomba: TfrmBomba
           end
           object pnlRodape: TPanel
             Left = 1
-            Top = 180
-            Width = 587
+            Top = 179
+            Width = 583
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 2
-            ExplicitTop = 179
-            ExplicitWidth = 583
             object pnlEspacamento: TPanel
               Left = 0
               Top = 0
@@ -340,12 +336,11 @@ object frmBomba: TfrmBomba
             object pnlBotoesRodape: TPanel
               Left = 355
               Top = 0
-              Width = 232
+              Width = 228
               Height = 41
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 1
-              ExplicitWidth = 228
               object pnlSalvar: TPanel
                 AlignWithMargins = True
                 Left = 0
@@ -422,6 +417,7 @@ object frmBomba: TfrmBomba
                   Height = 41
                   Action = actCancelar
                   Align = alClient
+                  Flat = True
                   Font.Charset = ANSI_CHARSET
                   Font.Color = clWindowText
                   Font.Height = -13

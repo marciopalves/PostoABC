@@ -2,8 +2,8 @@ object frmTanque: TfrmTanque
   Left = 0
   Top = 0
   Caption = 'Tanques'
-  ClientHeight = 392
-  ClientWidth = 585
+  ClientHeight = 390
+  ClientWidth = 577
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object frmTanque: TfrmTanque
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 585
+    Width = 577
     Height = 65
     Align = alTop
     BevelOuter = bvNone
@@ -161,7 +161,7 @@ object frmTanque: TfrmTanque
   object pnlFiltro: TPanel
     Left = 0
     Top = 65
-    Width = 585
+    Width = 577
     Height = 78
     Align = alTop
     BevelOuter = bvNone
@@ -209,8 +209,8 @@ object frmTanque: TfrmTanque
   object pnlDados: TPanel
     Left = 0
     Top = 143
-    Width = 585
-    Height = 249
+    Width = 577
+    Height = 247
     Align = alClient
     BevelOuter = bvNone
     Color = clSkyBlue
@@ -219,13 +219,13 @@ object frmTanque: TfrmTanque
     object pgDados: TPageControl
       Left = 0
       Top = 0
-      Width = 589
-      Height = 250
+      Width = 581
+      Height = 248
       ActivePage = tsDados
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 585
-      ExplicitHeight = 249
+      ExplicitWidth = 577
+      ExplicitHeight = 247
       object tsPesquisa: TTabSheet
         Caption = 'Pesquisa'
         object dbgDados: TDBGrid
@@ -273,14 +273,14 @@ object frmTanque: TfrmTanque
         object pnlEdits: TPanel
           Left = 0
           Top = 0
-          Width = 581
-          Height = 220
+          Width = 573
+          Height = 218
           Align = alClient
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 577
-          ExplicitHeight = 219
+          ExplicitWidth = 569
+          ExplicitHeight = 217
           object Label1: TLabel
             Left = 21
             Top = 12
@@ -327,14 +327,14 @@ object frmTanque: TfrmTanque
           end
           object pnlRodape: TPanel
             Left = 1
-            Top = 178
-            Width = 579
+            Top = 176
+            Width = 571
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 3
-            ExplicitTop = 177
-            ExplicitWidth = 575
+            ExplicitTop = 175
+            ExplicitWidth = 567
             object pnlEspacamento: TPanel
               Left = 0
               Top = 0
@@ -347,12 +347,12 @@ object frmTanque: TfrmTanque
             object pnlBotoesRodape: TPanel
               Left = 355
               Top = 0
-              Width = 224
+              Width = 216
               Height = 41
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 1
-              ExplicitWidth = 220
+              ExplicitWidth = 212
               object pnlSalvar: TPanel
                 AlignWithMargins = True
                 Left = 0

@@ -206,21 +206,26 @@ end;
 procedure TfrmCombustivel.actSalvarExecute(Sender: TObject);
 Var
   Control: TCombustivelControl;
+  Salvar: Boolean;
 begin
   AtribuirValores;
   Control := TCombustivelControl.Create;
   try
-    if Control.Salvar(Model) then
-      application.messagebox('Registro gravado com sucesso!','Atenção',MB_ICONWARNING+MB_OK)
-    else
-    begin
-      application.messagebox('Falha existem dados que precisam ser preenchidos!','Atenção',MB_ICONWARNING+MB_OK);
-      edtDescricao.SetFocus;
+    try
+      Salvar := Control.Salvar(Model);
+      if Salvar then
+        application.messagebox('Registro gravado com sucesso!','Atenção',MB_ICONWARNING+MB_OK);
+    except
+      on e: exception do
+        raise Exception.Create('Falha ao salvar registro!'+sLineBreak+e.ToString);
     end;
   finally
     FreeAndNil(Control);
-    Refresh;
-    HabilitarDefinirCampos(tacIndefinido);
+    if Salvar then
+    begin
+      Refresh;
+      HabilitarDefinirCampos(tacIndefinido);
+    end;
   end;
 end;
 

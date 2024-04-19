@@ -28,7 +28,12 @@ Type
 
 implementation
 
-Uses System.SysUtils, Dao.Sequencia, Model.Enumerado, Dao.Combustivel;
+Uses
+  System.SysUtils,
+  Dao.Sequencia,
+  Model.Enumerado,
+  Dao.Combustivel,
+  RTTIUtils;
 
 { TTanqueControl }
 
@@ -73,7 +78,7 @@ end;
 function TTanqueControl.Salvar(pTanque: TTanqueModel): boolean;
 begin
   result:= false;
-  if ValidaDados(pTanque) then
+  if TRTTIUTtils.ValidarCampos(pTanque) then
   begin
     case pTanque.Acao of
       tacIncluir:

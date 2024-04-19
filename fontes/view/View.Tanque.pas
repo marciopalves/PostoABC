@@ -211,21 +211,26 @@ end;
 procedure TfrmTanque.actSalvarExecute(Sender: TObject);
 Var
   Control: TTanqueControl;
+  Salvar: Boolean;
 begin
   AtribuirValores;
   Control := TTanqueControl.Create;
   try
-    if Control.Salvar(Model) then
-      application.messagebox('Registro gravado com sucesso!','Atenção',MB_ICONWARNING+MB_OK)
-    else
-    begin
-      application.messagebox('Falha existem dados que precisam ser preenchidos!','Atenção',MB_ICONWARNING+MB_OK);
-      edtDescricao.SetFocus;
+    try
+      Salvar := Control.Salvar(Model);
+      if Salvar then
+        application.messagebox('Registro gravado com sucesso!','Atenção',MB_ICONWARNING+MB_OK);
+    except
+      on e: exception do
+        raise Exception.Create('Falha ao salvar registro!'+sLineBreak+e.ToString);
     end;
   finally
     FreeAndNil(Control);
-    Refresh;
-    HabilitarDefinirCampos(tacIndefinido);
+    if Salvar then
+    begin
+      Refresh;
+      HabilitarDefinirCampos(tacIndefinido);
+    end;
   end;
 end;
 
@@ -299,7 +304,8 @@ procedure TfrmTanque.AtribuirValores;
 begin
   Model.Id := StrToInt(edtCodigo.Text);
   Model.Descricao := edtDescricao.Text;
-  Model.IdCombustivel := Integer(cbbCombustiveis.Items.Objects[cbbCombustiveis.ItemIndex]);
+  if cbbCombustiveis.ItemIndex >= 0 then
+    Model.IdCombustivel := Integer(cbbCombustiveis.Items.Objects[cbbCombustiveis.ItemIndex]);
   Model.Armazenamento := StrToFloatDef(edtArmazenamento.Text, 0);
 end;
 

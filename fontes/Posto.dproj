@@ -138,6 +138,7 @@
             <Form>frmRelAbastecimentos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="control\RTTIUtils.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -32,7 +32,11 @@ Type
 implementation
 
 
-Uses SysUtils, Model.Enumerado, Dao.Sequencia;
+Uses
+  SysUtils,
+  Model.Enumerado,
+  Dao.Sequencia,
+  RTTIUtils;
 
 { TBombaControl }
 
@@ -90,13 +94,16 @@ end;
 function TBombaControl.Salvar(pBomba: TBombaModel): boolean;
 begin
   result := false;
-  case pBomba.Acao of
-    tacIncluir:
-    begin
-      pBomba.Id := ProximoRegistro;
-      result := Dao.Incluir(pBomba);
+  if TRTTIUTtils.ValidarCampos(pBomba) then
+  begin
+    case pBomba.Acao of
+      tacIncluir:
+      begin
+        pBomba.Id := ProximoRegistro;
+        result := Dao.Incluir(pBomba);
+      end;
+      tacEdicao: result := Dao.Editar(pBomba);
     end;
-    tacEdicao: result := Dao.Editar(pBomba);
   end;
 end;
 

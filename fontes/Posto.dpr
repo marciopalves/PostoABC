@@ -25,7 +25,8 @@ uses
   View.Abastecimentos in 'view\View.Abastecimentos.pas' {frmAbastecimento},
   View.Rel.Cupom in 'view\relatorios\View.Rel.Cupom.pas' {frmRelCupom},
   View.Filtro.Rel.Abastecimentos in 'view\relatorios\View.Filtro.Rel.Abastecimentos.pas' {frmFiltroRelAbastecimentos},
-  View.Rel.Abastecimentos in 'view\relatorios\View.Rel.Abastecimentos.pas' {frmRelAbastecimentos};
+  View.Rel.Abastecimentos in 'view\relatorios\View.Rel.Abastecimentos.pas' {frmRelAbastecimentos},
+  RTTIUtils in 'control\RTTIUtils.pas';
 
 {$R *.res}
 
@@ -34,6 +35,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TDmConexao, DmConexao);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TfrmRelAbastecimentos, frmRelAbastecimentos);
   Application.Run;
 end.
