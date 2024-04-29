@@ -50,20 +50,18 @@ Const
               ' INNER JOIN TANQUE T ON T.ID = B.ID_TANQUE '+
               ' INNER JOIN COMBUSTIVEL C ON C.ID = T.ID_COMBUSTIVEL ';
 
-  SQL_ABASTECIMENTOS_AGRUPADOS = ' SELECT A.DATAHORA, '+
-                                 '        B.ID_TANQUE, '+
+  SQL_ABASTECIMENTOS_AGRUPADOS = ' SELECT B.ID_TANQUE, '+
                                  '        A.ID_BOMBA, '+
                                  '        SUM(A.QTD) AS QTD_TOTAL, '+
                                  '        AVG(A.VALOR_UNITARIO) AS MEDIA_VALOR_UNITARIO, '+
-                                 '        AVG(A.PERCENTUAL_IMPOSTO) AS MEDIA_PERCENTUAL_IMPOSTO, '+
                                  '        SUM(A.VALOR_IMPOSTO) AS TOTAL_IMPOSTO, '+
                                  '        SUM(A.VALOR_TOTAL) AS TOTAL_VALOR '+
                                  ' FROM ABASTECIMENTO A '+
                                  ' INNER JOIN BOMBA B ON B.ID = A.ID_BOMBA '+
                                  ' INNER JOIN TANQUE T ON T.ID = B.ID_TANQUE '+
                                  ' INNER JOIN COMBUSTIVEL C ON C.ID = T.ID_COMBUSTIVEL '+
-                                 ' GROUP BY A.DATAHORA, B.ID_TANQUE, A.ID_BOMBA, A.QTD, A.VALOR_TOTAL'+
-                                 ' HAVING A.DATAHORA BETWEEN :PDATAINI AND :PDATAFIM';
+                                 ' WHERE A.DATAHORA BETWEEN :PDATAINI AND :PDATAFIM '+
+                                 ' GROUP BY B.ID_TANQUE, A.ID_BOMBA';
 
   WHERE_CUPOM_DATA = ' WHERE A.DATAHORA BETWEEN :PDATAINI AND :PDATAFIM';
 

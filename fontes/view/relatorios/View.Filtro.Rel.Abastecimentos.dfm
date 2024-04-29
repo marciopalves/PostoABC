@@ -31,22 +31,22 @@ object frmFiltroRelAbastecimentos: TfrmFiltroRelAbastecimentos
       ExplicitWidth = 320
       ExplicitHeight = 134
       object Label1: TLabel
-        Left = 48
-        Top = 88
+        Left = 40
+        Top = 64
         Width = 56
         Height = 15
         Caption = 'Data Inicio'
       end
       object Label2: TLabel
-        Left = 154
-        Top = 88
+        Left = 146
+        Top = 64
         Width = 47
         Height = 15
         Caption = 'Data Fim'
       end
       object dtpInicio: TDateTimePicker
-        Left = 48
-        Top = 103
+        Left = 40
+        Top = 79
         Width = 81
         Height = 23
         Date = 45394.000000000000000000
@@ -54,8 +54,8 @@ object frmFiltroRelAbastecimentos: TfrmFiltroRelAbastecimentos
         TabOrder = 0
       end
       object dtpFim: TDateTimePicker
-        Left = 152
-        Top = 103
+        Left = 144
+        Top = 79
         Width = 81
         Height = 23
         Date = 45394.000000000000000000
