@@ -111,6 +111,7 @@
         <DCCReference Include="control\Control.Tanque.pas"/>
         <DCCReference Include="control\Control.Bomba.pas"/>
         <DCCReference Include="control\Control.Abastecimento.pas"/>
+        <DCCReference Include="control\Helpers\Control.Helpers.DBGridHelper.pas"/>
         <DCCReference Include="view\View.Principal.pas">
             <Form>frmPrincipal</Form>
         </DCCReference>
@@ -128,18 +129,14 @@
         </DCCReference>
         <DCCReference Include="view\relatorios\View.Rel.Cupom.pas">
             <Form>frmRelCupom</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="view\relatorios\View.Filtro.Rel.Abastecimentos.pas">
             <Form>frmFiltroRelAbastecimentos</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="view\relatorios\View.Rel.Abastecimentos.pas">
             <Form>frmRelAbastecimentos</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="control\RTTIUtils.pas"/>
-        <DCCReference Include="control\Control.Helpers.DBGridHelper.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

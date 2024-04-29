@@ -18,6 +18,7 @@ uses
   Control.Tanque in 'control\Control.Tanque.pas',
   Control.Bomba in 'control\Control.Bomba.pas',
   Control.Abastecimento in 'control\Control.Abastecimento.pas',
+  Control.Helpers.DBGridHelper in 'control\Helpers\Control.Helpers.DBGridHelper.pas',
   View.Principal in 'view\View.Principal.pas' {frmPrincipal},
   View.Combustivel in 'view\View.Combustivel.pas' {frmCombustivel},
   View.Bomba in 'view\View.Bomba.pas' {frmBomba},
@@ -26,8 +27,7 @@ uses
   View.Rel.Cupom in 'view\relatorios\View.Rel.Cupom.pas' {frmRelCupom},
   View.Filtro.Rel.Abastecimentos in 'view\relatorios\View.Filtro.Rel.Abastecimentos.pas' {frmFiltroRelAbastecimentos},
   View.Rel.Abastecimentos in 'view\relatorios\View.Rel.Abastecimentos.pas' {frmRelAbastecimentos},
-  RTTIUtils in 'control\RTTIUtils.pas',
-  Control.Helpers.DBGridHelper in 'control\Control.Helpers.DBGridHelper.pas';
+  RTTIUtils in 'control\RTTIUtils.pas';
 
 {$R *.res}
 
