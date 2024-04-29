@@ -26,7 +26,8 @@ uses
   View.Rel.Cupom in 'view\relatorios\View.Rel.Cupom.pas' {frmRelCupom},
   View.Filtro.Rel.Abastecimentos in 'view\relatorios\View.Filtro.Rel.Abastecimentos.pas' {frmFiltroRelAbastecimentos},
   View.Rel.Abastecimentos in 'view\relatorios\View.Rel.Abastecimentos.pas' {frmRelAbastecimentos},
-  RTTIUtils in 'control\RTTIUtils.pas';
+  RTTIUtils in 'control\RTTIUtils.pas',
+  Control.Helpers.DBGridHelper in 'control\Control.Helpers.DBGridHelper.pas';
 
 {$R *.res}
 

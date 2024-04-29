@@ -12,6 +12,7 @@ object frmCombustivel: TfrmCombustivel
   Font.Style = []
   Position = poMainFormCenter
   OnClose = FormClose
+  OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 15
   object pnlBotoes: TPanel
@@ -24,6 +25,7 @@ object frmCombustivel: TfrmCombustivel
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 577
     object pnlNovo: TPanel
       AlignWithMargins = True
       Left = 0
@@ -167,6 +169,7 @@ object frmCombustivel: TfrmCombustivel
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 577
     object lblCodigo: TLabel
       Left = 13
       Top = 20
@@ -215,23 +218,25 @@ object frmCombustivel: TfrmCombustivel
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 577
+    ExplicitHeight = 247
     object pgDados: TPageControl
       Left = 0
       Top = 0
-      Width = 585
-      Height = 249
-      ActivePage = tsDados
+      Width = 581
+      Height = 248
+      ActivePage = tsPesquisa
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 581
-      ExplicitHeight = 248
+      ExplicitWidth = 577
+      ExplicitHeight = 247
       object tsPesquisa: TTabSheet
         Caption = 'Pesquisa'
         object dbgDados: TDBGrid
           Left = 0
           Top = 0
-          Width = 581
-          Height = 220
+          Width = 573
+          Height = 218
           Align = alClient
           DataSource = ds
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -277,14 +282,14 @@ object frmCombustivel: TfrmCombustivel
         object pnlEdits: TPanel
           Left = 0
           Top = 0
-          Width = 577
-          Height = 219
+          Width = 573
+          Height = 218
           Align = alClient
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 573
-          ExplicitHeight = 218
+          ExplicitWidth = 569
+          ExplicitHeight = 217
           object Label1: TLabel
             Left = 21
             Top = 12
@@ -338,14 +343,14 @@ object frmCombustivel: TfrmCombustivel
           end
           object pnlRodape: TPanel
             Left = 1
-            Top = 177
-            Width = 575
+            Top = 176
+            Width = 571
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 5
-            ExplicitTop = 176
-            ExplicitWidth = 571
+            ExplicitTop = 175
+            ExplicitWidth = 567
             object pnlEspacamento: TPanel
               Left = 0
               Top = 0
@@ -358,12 +363,12 @@ object frmCombustivel: TfrmCombustivel
             object pnlBotoesRodape: TPanel
               Left = 355
               Top = 0
-              Width = 220
+              Width = 216
               Height = 41
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 1
-              ExplicitWidth = 216
+              ExplicitWidth = 212
               object pnlSalvar: TPanel
                 AlignWithMargins = True
                 Left = 0
@@ -572,6 +577,7 @@ object frmCombustivel: TfrmCombustivel
     object mmTableVALOR: TFloatField
       DisplayLabel = 'Valor'
       FieldName = 'VALOR'
+      DisplayFormat = '#,##0.00'
     end
   end
 end

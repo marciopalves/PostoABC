@@ -2,8 +2,8 @@ object frmBomba: TfrmBomba
   Left = 0
   Top = 0
   Caption = 'Bombas de Combust'#237'vel'
-  ClientHeight = 394
-  ClientWidth = 593
+  ClientHeight = 393
+  ClientWidth = 589
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,14 +18,13 @@ object frmBomba: TfrmBomba
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 593
+    Width = 589
     Height = 65
     Align = alTop
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 589
     object pnlNovo: TPanel
       AlignWithMargins = True
       Left = 0
@@ -162,14 +161,13 @@ object frmBomba: TfrmBomba
   object pnlFiltro: TPanel
     Left = 0
     Top = 65
-    Width = 593
+    Width = 589
     Height = 78
     Align = alTop
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 589
     object lblCodigo: TLabel
       Left = 13
       Top = 20
@@ -211,25 +209,21 @@ object frmBomba: TfrmBomba
   object pnlDados: TPanel
     Left = 0
     Top = 143
-    Width = 593
-    Height = 251
+    Width = 589
+    Height = 250
     Align = alClient
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 589
-    ExplicitHeight = 250
     object pgDados: TPageControl
       Left = 0
       Top = 0
-      Width = 593
-      Height = 251
+      Width = 589
+      Height = 250
       ActivePage = tsDados
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 589
-      ExplicitHeight = 250
       object tsPesquisa: TTabSheet
         Caption = 'Pesquisa'
         object dbgDados: TDBGrid
@@ -273,8 +267,8 @@ object frmBomba: TfrmBomba
         object pnlEdits: TPanel
           Left = 0
           Top = 0
-          Width = 585
-          Height = 221
+          Width = 581
+          Height = 220
           Align = alClient
           Color = clSkyBlue
           ParentBackground = False
@@ -318,8 +312,8 @@ object frmBomba: TfrmBomba
           end
           object pnlRodape: TPanel
             Left = 1
-            Top = 179
-            Width = 583
+            Top = 178
+            Width = 579
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
@@ -336,7 +330,7 @@ object frmBomba: TfrmBomba
             object pnlBotoesRodape: TPanel
               Left = 355
               Top = 0
-              Width = 228
+              Width = 224
               Height = 41
               Align = alClient
               BevelOuter = bvNone

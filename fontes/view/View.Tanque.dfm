@@ -2,8 +2,8 @@ object frmTanque: TfrmTanque
   Left = 0
   Top = 0
   Caption = 'Tanques'
-  ClientHeight = 390
-  ClientWidth = 577
+  ClientHeight = 389
+  ClientWidth = 573
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,14 @@ object frmTanque: TfrmTanque
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 577
+    Width = 573
     Height = 65
     Align = alTop
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 569
     object pnlNovo: TPanel
       AlignWithMargins = True
       Left = 0
@@ -161,13 +162,14 @@ object frmTanque: TfrmTanque
   object pnlFiltro: TPanel
     Left = 0
     Top = 65
-    Width = 577
+    Width = 573
     Height = 78
     Align = alTop
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 569
     object lblCodigo: TLabel
       Left = 13
       Top = 20
@@ -209,30 +211,32 @@ object frmTanque: TfrmTanque
   object pnlDados: TPanel
     Left = 0
     Top = 143
-    Width = 577
-    Height = 247
+    Width = 573
+    Height = 246
     Align = alClient
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 569
+    ExplicitHeight = 245
     object pgDados: TPageControl
       Left = 0
       Top = 0
-      Width = 581
-      Height = 248
-      ActivePage = tsDados
+      Width = 573
+      Height = 246
+      ActivePage = tsPesquisa
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 577
-      ExplicitHeight = 247
+      ExplicitWidth = 569
+      ExplicitHeight = 245
       object tsPesquisa: TTabSheet
         Caption = 'Pesquisa'
         object dbgDados: TDBGrid
           Left = 0
           Top = 0
-          Width = 581
-          Height = 220
+          Width = 565
+          Height = 216
           Align = alClient
           DataSource = ds
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -273,14 +277,14 @@ object frmTanque: TfrmTanque
         object pnlEdits: TPanel
           Left = 0
           Top = 0
-          Width = 573
-          Height = 218
+          Width = 565
+          Height = 216
           Align = alClient
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 569
-          ExplicitHeight = 217
+          ExplicitWidth = 561
+          ExplicitHeight = 215
           object Label1: TLabel
             Left = 21
             Top = 12
@@ -327,14 +331,14 @@ object frmTanque: TfrmTanque
           end
           object pnlRodape: TPanel
             Left = 1
-            Top = 176
-            Width = 571
+            Top = 174
+            Width = 563
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 3
-            ExplicitTop = 175
-            ExplicitWidth = 567
+            ExplicitTop = 173
+            ExplicitWidth = 559
             object pnlEspacamento: TPanel
               Left = 0
               Top = 0
@@ -347,12 +351,12 @@ object frmTanque: TfrmTanque
             object pnlBotoesRodape: TPanel
               Left = 355
               Top = 0
-              Width = 216
+              Width = 208
               Height = 41
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 1
-              ExplicitWidth = 212
+              ExplicitWidth = 204
               object pnlSalvar: TPanel
                 AlignWithMargins = True
                 Left = 0

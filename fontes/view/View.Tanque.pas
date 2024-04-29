@@ -104,7 +104,8 @@ implementation
 uses
   uConexao,
   Control.Tanque,
-  Constantes;
+  Constantes,
+  Control.Helpers.DBGridHelper;
 
 { TfrmCombustivel }
 
@@ -242,6 +243,7 @@ end;
 procedure TfrmTanque.FormCreate(Sender: TObject);
 begin
   Model := TTanqueModel.Create;
+  dbgDados.EnableSorting;
 end;
 
 procedure TfrmTanque.FormShow(Sender: TObject);

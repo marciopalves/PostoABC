@@ -101,7 +101,8 @@ implementation
 uses
 
   Control.Bomba,
-  Constantes;
+  Constantes,
+  Control.Helpers.DBGridHelper;
 
 { TfrmCombustivel }
 
@@ -235,6 +236,7 @@ end;
 procedure TfrmBomba.FormCreate(Sender: TObject);
 begin
   Model := TBombaModel.Create;
+  dbgDados.EnableSorting;
 end;
 
 procedure TfrmBomba.FormShow(Sender: TObject);

@@ -80,6 +80,7 @@ type
     procedure actPesquisarExecute(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure dbgDadosDblClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     FCombustivel: TCombustivelModel;
     procedure Limpar;
@@ -101,7 +102,8 @@ implementation
 
 uses
   uConexao,
-  Control.Combustivel;
+  Control.Combustivel,
+  Control.Helpers.DBGridHelper;
 
 { TfrmCombustivel }
 
@@ -249,6 +251,11 @@ procedure TfrmCombustivel.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   mmTable.Close;
   FreeAndNil(Model);
+end;
+
+procedure TfrmCombustivel.FormCreate(Sender: TObject);
+begin
+  dbgDados.EnableSorting;
 end;
 
 procedure TfrmCombustivel.CarregarEdits;

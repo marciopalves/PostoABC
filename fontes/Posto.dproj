@@ -139,6 +139,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="control\RTTIUtils.pas"/>
+        <DCCReference Include="control\Control.Helpers.DBGridHelper.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
