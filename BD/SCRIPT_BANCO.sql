@@ -5,7 +5,6 @@ CREATE TABLE Combustivel
     Sigla VARCHAR(2),
     Valor FLOAT
 );
-// constraint pk_people primary key (id),
 
 CREATE TABLE Tanque
 (
