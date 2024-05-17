@@ -1,25 +1,24 @@
-CREATE TABLE Combustivel
-(
-    ID Integer NOT NULL PRIMARY KEY,
+Create table Combustivel(
+    Id INTEGER NOT NULL PRIMARY KEY,
     Descricao VARCHAR(25),
     Sigla VARCHAR(2),
-    Valor FLOAT
+    PercentualImposto INTEGER,
+    Valor Float
 );
 
-CREATE TABLE Tanque
-(
-    ID Integer NOT NULL PRIMARY KEY,
-    Descricao VARCHAR(25),
-    ID_Combustivel INTEGER NOT NULL, 
-    Constraint FK_Combustivel foreign key ON ID_Combustivel REFERENCES Combustivel on (ID)
+CREATE TABLE TANQUE(
+    ID INTEGER NOT NULL PRIMARY KEY,
+    DESCRICAO VARCHAR(25),
+    ID_COMBUSTIVEL INTEGER NOT NULL,
+    ARMAZENAMENTO FLOAT,
+    CONSTRAINT FK_COMBUSTIVEL FOREIGN KEY (ID_COMBUSTIVEL) REFERENCES COMBUSTIVEL(ID)  
 );
 
-CREATE TABLE Tanque
-(
-    ID Integer NOT NULL PRIMARY KEY,
-    Descricao VARCHAR(25),
-    ID_Combustivel INTEGER NOT NULL, 
-    Constraint FK_Combustivel foreign key ON (ID_Combustivel) REFERENCES Combustivel on (ID)
+CREATE TABLE BOMBA(
+    ID INTEGER NOT NULL PRIMARY KEY,
+    DESCRICAO VARCHAR(25),
+    ID_TANQUE INTEGER NOT NULL,    
+    CONSTRAINT FK_TANQUE FOREIGN KEY (ID_TANQUE) REFERENCES TANQUE(ID)  
 );
 
 CREATE TABLE Abastecimento
@@ -33,4 +32,4 @@ CREATE TABLE Abastecimento
     VALOR_TOTAL FLOAT,
     CONSTRAINT PK_Abastecimento PRIMARY KEY(ID)
     CONSTRAINT FK_BOMBA FOREIGN KEY (ID_BOMBA) REFERENCES BOMBA (ID)    
-)
+);
